@@ -5,14 +5,14 @@ import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  emoji: string;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
     title: 'Comprehensive Coverage',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    emoji: '🤖',
     description: (
       <>
         Master the fundamentals of Physical AI and humanoid robotics, from locomotion
@@ -23,7 +23,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Interactive Learning',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    emoji: '🧠',
     description: (
       <>
         Engage with AI-powered learning assistants that explain concepts, quiz your
@@ -34,7 +34,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Real-World Applications',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    emoji: '⚙️',
     description: (
       <>
         Explore practical examples from Boston Dynamics, surgical robotics, and
@@ -45,11 +45,11 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, emoji, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <div className={styles.featureEmoji}>{emoji}</div>
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>

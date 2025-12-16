@@ -68,16 +68,13 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/humanoid-robotics-social-card.jpg',
     colorMode: {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Humanoid Robotics Book',
-      logo: {
-        alt: 'Humanoid Robotics Book Logo',
-        src: 'img/logo.svg',
-      },
+      title: '🤖 Humanoid Robotics Book',
+      // Removed logo to avoid showing Docusaurus branding
       items: [
         {
           type: 'docSidebar',
